@@ -1,0 +1,80 @@
+.photo-container {
+    background-color: #fff;
+    width: 560px;
+    z-index: 1000;
+}
+
+.photo-close {
+  display: none;
+  color: #fff;
+
+}
+.photo-close p{
+margin-top: 3px;
+margin-right: -10px;
+}
+.video-placeholder {
+  /* Example - Adjust based on actual dimensions and spacing of .photo-container */
+  width: 560px !important; /* Same as the iframe width */
+  height: 315px !important; /* Same as the iframe height */
+  margin: same-as-photo-container; /* Ensure margins match */
+  /* Add any padding or other properties that affect the size */
+}
+
+@keyframes slideToCorner {
+  100% {
+    /* Move to the bottom right corner; adjust values as needed */
+    transform: translate(calc(100vw - 100% - 60px), calc(100vh - 100% - 60px));
+  }
+}
+.photo-container{
+  width: 560px !important;
+  height: 315px !important;
+}
+
+
+ 
+@media screen and (min-width: 1000px) {
+
+
+  .photo-container.minimized{
+    width: 560px !important;
+    height: 315px !important;
+  }
+
+  .photo-container.minimized .photo-close {
+    color: #fff;
+    display: block; /* Make it visible only when minimized */
+    position: absolute; /* Position it relative to its first positioned (not static) ancestor element */
+    right: 20px; /* Adjust as needed */
+    z-index: 10; /* Ensure it's above the video; adjust as needed */
+    font-size: 30px;
+
+  }
+  .photo-container.minimized .photo-close p:hover {
+    color: red;
+    cursor: pointer; /* Optional: Changes the cursor on hover to indicate it's clickable */
+
+  }
+  
+  .photo-container.minimized {
+    position: fixed;
+    animation: slideToCorner 0.8s forwards;
+    /* Ensure the element starts from its initial position */
+    top: 0;
+    left: 0;
+    /* Other styles as needed */
+    box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    text-align: center;
+  }
+  div.photo-container.minimized {
+    box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    text-align: center;
+  }
+
+}
+
+.photo-container img {
+    width: 100%;
+    height: auto;
+}
