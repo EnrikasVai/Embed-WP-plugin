@@ -1,7 +1,7 @@
 <?php
 /*
 Plugin Name:  Embed animation
-Plugin URI:   https://github.com/EnrikasVai
+Plugin URI:   https://github.com/EnrikasVai/Embed-WP-plugin
 Description:  Plugin that adds your yt embed video to every post at the top and adds an animation that minimize the video and snaps it to bottom right corner
 Version:      1.0
 Author:       Enrikas Vaiciulis
